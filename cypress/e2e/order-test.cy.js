@@ -19,7 +19,7 @@ describe("Pet Store API Tests", () => {
       });
     });
 
-    it("User can get the order created", () => {   
+    it("User can get the created order", () => {   
       const orderId = Cypress.env('orderId');  
         cy.request("GET", `/store/order/${orderId}`).then((response) => {
           expect(response.status).to.equal(200);
@@ -31,7 +31,7 @@ describe("Pet Store API Tests", () => {
           });
       });
 
-      it("User can delete the order created", () => {   
+      it("User can delete the created order", () => {   
         const orderId = Cypress.env('orderId');  
           cy.request("DELETE", `/store/order/${orderId}`).then((response) => {
             expect(response.status).to.equal(200);
